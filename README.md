@@ -7,7 +7,7 @@ Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli
 Execute `npm install --force` para instalar todas as dependencias do projeto.
 ## Servidor de desenvolvimento
 
-Execute `npm start` para iniciar a aplicação. Navegue até `http://localhost:4200/`. O aplicativo será recarregado automaticamente se você alterar qualquer um dos arquivos de origem.
+Execute `npm start` para iniciar a aplicação. Navegue até `http://localhost:4200/`. O aplicativo será recarregado automaticamente, se você alterar qualquer um dos arquivos de origem.
 
 ## Construir
 
