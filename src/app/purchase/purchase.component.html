@@ -13,7 +13,7 @@
   <h3 class="mt-3">{{entity.address}}</h3>
   <div *ngIf="this.entity.address != ''" class="text-center mb-3">
     <b>VALOR DA COMPRA</b>
-    <div>${{entity.dollar}}</div>
+    <div>{{entity.message}}</div>
   </div>
   <button *ngIf="this.entity.address != ''" class="btn btn-success col-12" (click)="save()">COMPRAR</button>
 </form>

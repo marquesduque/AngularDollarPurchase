@@ -43,7 +43,12 @@ export class purchaseComponent implements OnInit {
     }
   }
   save() {
-    this.db.save(this.entity).subscribe(
+    this.db.save( {
+      zipcode: this.entity.zipcode,
+      name: this.entity.name,
+      address: this.entity.address,
+      dollar: '$'+this.entity.dollar.toFixed(2)
+    }).subscribe(
       () => {
         this.alert('Parabêns', 'purchase realizada com sucesso');
         this.router.navigate(['/list'])
@@ -66,6 +71,7 @@ export class purchaseComponent implements OnInit {
     zipcode: '',
     name: '',
     address: '',
-    dollar: ''
+    dollar: 0,
+    message: ''
   }
 }
