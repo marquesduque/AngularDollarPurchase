@@ -14,9 +14,14 @@ export class purchaseService {
   list(): Observable<any> {
     return from(this.db.getAll('purchase'));
   }
-  salvar(entity: any): Observable<any> {
+  save(entity: any): Observable<any> {
 
     return from(this.db.add('purchase', entity));
   }
+  delete(id: number): Observable<any> {
+
+    return from(this.db.delete('purchase', id));
+  }
+
 }
 

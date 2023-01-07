@@ -15,29 +15,27 @@ export class listComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.db.list().subscribe((res)=>{
-      debugger;
-      this.list=res;
+    this.search();
+  }
+  search() {
+    this.db.list().subscribe((res) => {
+      this.list = res;
     });
   }
-
 
   select(selected: any): void {
     this.selected = selected;
   }
 
-  delete(flight: any): void {
-    if (confirm('Are you sure?')) {
-      // this.db.delete(flight).subscribe(() => {
-      //     this.feedback = {type: 'success', message: 'Delete was successful!'};
-      //     setTimeout(() => {
-      //       this.search();
-      //     }, 1000);
-      //   },
-      //   err => {
-      //     this.feedback = {type: 'warning', message: 'Error deleting.'};
-      //   }
-      // );
+  delete(item: any): void {
+    if (confirm('Tem certesa que deseja excluir este item?')) {
+
+      this.db.delete(item.id).subscribe(() => {
+        this.search();
+      },
+        err => {
+        }
+      );
     }
   }
 }
