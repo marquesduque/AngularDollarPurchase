@@ -1,3 +1,7 @@
+# ATENÇÃO AVALIADOR
+
+Caro avaliador devido à funcionalidade "Distance Matrix API" do google maps ser paga e necessitar de token para o seu consumo esta funcionalidade não foi desenvolvida no teste, caso aja a necessidade deste desenvolvimento terei o prazer em fazê-lo, porem, para isso preciso que seja disponibilizado uma credencial para o desenvolvimento
+
 # Demonstração
 
 Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 12.0.1.
