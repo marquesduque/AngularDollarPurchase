@@ -35,7 +35,6 @@ export class purchaseComponent implements OnInit {
       this.service.findZipCode(this.entity.zipcode)
         .subscribe(ent => {
           this.entity.address = ent.logradouro + ' - ' + ent.cidade + '/' + ent.estado;
-          this.save();
         },
           err => {
             this.alert('ATENÇÃO', 'Informe um CEP válido!')

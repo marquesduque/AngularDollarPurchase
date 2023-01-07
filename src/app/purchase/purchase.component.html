@@ -11,9 +11,9 @@
   </div>
   <button *ngIf="this.entity.address  == ''" class="btn btn-primary mt-3 col-12" (click)="continuar()">CONTINUAR</button>
   <h3 class="mt-3">{{entity.address}}</h3>
-  <div *ngIf="this.entity.address != ''" class="text-center">
+  <div *ngIf="this.entity.address != ''" class="text-center mb-3">
     <b>VALOR DA COMPRA</b>
     <div>${{entity.dollar}}</div>
   </div>
-  <button *ngIf="this.entity.address != ''" class="btn btn-success col-12" (click)="continuar()">COMPRAR</button>
+  <button *ngIf="this.entity.address != ''" class="btn btn-success col-12" (click)="save()">COMPRAR</button>
 </form>

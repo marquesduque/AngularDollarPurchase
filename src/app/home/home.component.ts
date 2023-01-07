@@ -37,10 +37,10 @@ export class HomeComponent implements OnInit {
   calcular(tipo: String) {
     debugger;
     if (tipo == 'dollar') {
-      this.entity.real = this.entity.dollar / this.entity.price;
+      this.entity.real = this.entity.dollar * this.entity.price;
     }
     else {
-      this.entity.dollar = this.entity.real * this.entity.price;
+      this.entity.dollar = this.entity.real / this.entity.price;
     }
   }
   purchase() {
