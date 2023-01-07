@@ -1,0 +1,22 @@
+<h1 class="title text-center">COMPRAR DOLAR</h1>
+<div class="mb-3 text-center">
+  Informe abaixo quantos dolares deseja purchase
+</div>
+
+
+<div class="bg-white border rounded-5">
+
+  <section class="p-4 text-center">
+    <h4 class="text-center">$1 Dólar americano igual a R${{entity.price}} Real brasileiro</h4>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Real Brasileiro</span>
+      <input currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" type="tel" class="form-control" (keyup)="calcular('real')"
+        [(ngModel)]="entity.real">
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Dólar Americano</span>
+      <input currencyMask type="tel" class="form-control" [(ngModel)]="entity.dollar"  (keyup)="calcular('dollar')" >
+    </div>
+    <button  type="button" class="btn btn-primary" (click)="purchase()"><i class="bi bi-cart"></i> COMPRAR</button>
+  </section>
+</div>

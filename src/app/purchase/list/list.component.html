@@ -1,0 +1,36 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+    <li class="breadcrumb-item active">Compras</li>
+  </ol>
+</nav>
+<h2>Consultar lista de compras</h2>
+
+<div>
+  <div class="table-responsive">
+    <table class="table table-centered table-hover mt-2" id="datatable">
+      <thead>
+        <tr>
+          <th class="border-top-0" scope="col">Id</th>
+          <th class="border-top-0" scope="col">Nome</th>
+          <th class="border-top-0" scope="col">Endereço</th>
+          <th class="border-top-0" scope="col">CEP</th>
+          <th class="border-top-0" scope="col">Dolar</th>
+          <th class="border-top-0" scope="col" style="width:120px"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of list" [class.active]="item === selected">
+          <td>{{item.id}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.address}}</td>
+          <td>{{item.zipcode}}</td>
+          <td>{{item.dollar}}</td>
+          <td style="white-space: nowrap">
+            <button (click)="delete(item)" class="btn btn-danger">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
