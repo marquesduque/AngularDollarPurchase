@@ -2,7 +2,7 @@
 
 Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 12.0.1.
 
-## Instalaçao
+## Instalação
 
 Execute `npm install --force` para instalar todas as dependencias do projeto.
 ## Servidor de desenvolvimento
