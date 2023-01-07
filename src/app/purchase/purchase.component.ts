@@ -22,8 +22,8 @@ export class purchaseComponent implements OnInit {
   }
   close = () => { }
   ngOnInit() {
-
   }
+
   continuar() {
     if (this.entity.name == '') {
       this.alert("Oops", "O campo nome é obrigatório");
