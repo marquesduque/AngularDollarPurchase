@@ -7,7 +7,7 @@
 <div class="bg-white border rounded-5">
 
   <section class="p-4 text-center">
-    <h4 class="text-center">$1 Dólar americano igual a R${{entity.price}} Real brasileiro</h4>
+    <h4 class="text-center">$1 Dólar americano igual a R${{entity.price.toFixed(2)}} Real brasileiro</h4>
     <div class="input-group mb-3">
       <span class="input-group-text">Real Brasileiro</span>
       <input currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" type="tel" class="form-control" (keyup)="calcular('real')"

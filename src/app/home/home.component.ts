@@ -35,7 +35,6 @@ export class HomeComponent implements OnInit {
       );
   }
   calcular(tipo: String) {
-    debugger;
     if (tipo == 'dollar') {
       this.entity.real = this.entity.dollar * this.entity.price;
     }
@@ -45,7 +44,7 @@ export class HomeComponent implements OnInit {
   }
   purchase() {
     var dialog = this.dialog.open(purchaseComponent);
-    dialog.componentInstance.entity.dollar = this.entity.dollar;
+    dialog.componentInstance.entity.dollar = this.entity.dollar.toFixed(2);
     dialog.componentInstance.close = () => {
       dialog.close();
     }

@@ -66,6 +66,6 @@ export class purchaseComponent implements OnInit {
     zipcode: '',
     name: '',
     address: '',
-    dollar: 0
+    dollar: ''
   }
 }
