@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit {
         }
         else {
           this.entity.price = ent.value[0].cotacaoCompra;
+          this.entity.real = ent.value[0].cotacaoCompra;
           this.calcular('real');
         }
       },
