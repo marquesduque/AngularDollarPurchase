@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
   purchase() {
     var dialog = this.dialog.open(purchaseComponent);
     dialog.componentInstance.entity.dollar = this.entity.dollar;
-    dialog.componentInstance.entity.message = "R$ "+this.entity.dollar.toFixed(2) +" POR $ "+ this.entity.dollar.toFixed(2);
+    dialog.componentInstance.entity.message = "R$ "+this.entity.real.toFixed(2) +" POR $ "+ this.entity.dollar.toFixed(2);
     dialog.componentInstance.close = () => {
       dialog.close();
     }
