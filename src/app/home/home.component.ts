@@ -19,7 +19,8 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.service.findPrice(new Date(new Date().setDate(new Date().getDate()-1)))
+    debugger;
+    this.service.findPrice(new Date(new Date().setDate(new Date().getDate()-2)))
       .subscribe(ent => {
         if (ent.value.length == 0) {
           alert('Não foi possivel recuperar a cotação atual do dolar');
@@ -27,7 +28,7 @@ export class HomeComponent implements OnInit {
         else {
           this.entity.price = ent.value[0].cotacaoCompra;
           this.entity.real = ent.value[0].cotacaoCompra;
-          this.calcular('real');
+          this.calculator('real');
         }
       },
         err => {
@@ -35,7 +36,7 @@ export class HomeComponent implements OnInit {
         }
       );
   }
-  calcular(tipo: String) {
+  calculator(tipo: String) {
     if (tipo == 'dollar') {
       this.entity.real = this.entity.dollar * this.entity.price;
     }
